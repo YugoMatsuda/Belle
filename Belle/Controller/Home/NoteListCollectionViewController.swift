@@ -5,24 +5,25 @@
 //  Created by Yugo Matsuda on 2021-03-06.
 //
 
-import UIKit
+import XLPagerTabStrip
 
 private let reuseIdentifier = "Cell"
 
 class NoteListCollectionViewController: UICollectionViewController {
     
+    var itemInfo: IndicatorInfo = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        // Do any additional setup after loading the view.
+        setUpCollectionView()
     }
-    
+    func setUpCollectionView(){
+        let layout = UICollectionViewFlowLayout()
+        collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.backgroundColor = .systemBackground
+        collectionView.collectionViewLayout = layout
+        collectionView.contentInsetAdjustmentBehavior = .never
+    }
     /*
      // MARK: - Navigation
      
@@ -66,17 +67,17 @@ extension NoteListCollectionViewController: UICollectionViewDelegateFlowLayout{
         return itemSize
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 20
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 10
-//    }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
     }
     
     
     
+}
+extension NoteListCollectionViewController: IndicatorInfoProvider{
+
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return itemInfo
+    }
 }
