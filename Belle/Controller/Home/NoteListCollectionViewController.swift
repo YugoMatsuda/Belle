@@ -7,7 +7,7 @@
 
 import XLPagerTabStrip
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "NoteListCollectionViewCell"
 
 class NoteListCollectionViewController: UICollectionViewController {
     
@@ -20,8 +20,8 @@ class NoteListCollectionViewController: UICollectionViewController {
     func setUpCollectionView(){
         let layout = UICollectionViewFlowLayout()
         collectionView.collectionViewLayout = layout
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView.backgroundColor = .systemBackground
+        collectionView.register(NoteListCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.backgroundColor = .systemGroupedBackground
         collectionView.contentInsetAdjustmentBehavior = .never
     }
     /*
@@ -48,8 +48,9 @@ class NoteListCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! NoteListCollectionViewCell
+        cell.backgroundColor = .systemBackground
+        cell.setUp()
         // Configure the cell
         
         return cell
