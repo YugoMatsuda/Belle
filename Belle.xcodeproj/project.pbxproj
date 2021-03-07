@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		656625BF25F4A47B00FDA9CC /* NoteListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656625BD25F4A47B00FDA9CC /* NoteListTableViewCell.swift */; };
+		656625C025F4A47B00FDA9CC /* NoteListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656625BE25F4A47B00FDA9CC /* NoteListTableViewCell.xib */; };
 		656A8AA925F4909F00C977E3 /* NoteListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656A8AA725F4909F00C977E3 /* NoteListCollectionViewCell.swift */; };
 		656A8AAA25F4909F00C977E3 /* NoteListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656A8AA825F4909F00C977E3 /* NoteListCollectionViewCell.xib */; };
 		656EE58A25F3A28300913CC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE58925F3A28300913CC2 /* AppDelegate.swift */; };
@@ -18,6 +20,7 @@
 		656EE5AC25F3A28600913CC2 /* BelleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE5AB25F3A28600913CC2 /* BelleUITests.swift */; };
 		656EE60525F3B4CB00913CC2 /* NoteListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE60425F3B4CB00913CC2 /* NoteListCollectionViewController.swift */; };
 		656EE61525F4628800913CC2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE61425F4628800913CC2 /* HomeViewController.swift */; };
+		658DBECF25F4A3B000DBE590 /* NoteListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DBECE25F4A3B000DBE590 /* NoteListTableViewController.swift */; };
 		65E605E125F46D19004563A4 /* CalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E605E025F46D19004563A4 /* CalendarLogic.swift */; };
 		798118B73DD1D01FCC2DBD94 /* Pods_Belle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27542396902F278A842F579F /* Pods_Belle.framework */; };
 		8F222F183EA1FFEEBF12F91B /* Pods_Belle_BelleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31491E0144AF531D8C611E7 /* Pods_Belle_BelleUITests.framework */; };
@@ -46,6 +49,8 @@
 		2298F976CC9DA05CF1279468 /* Pods-BelleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BelleTests.debug.xcconfig"; path = "Target Support Files/Pods-BelleTests/Pods-BelleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		27542396902F278A842F579F /* Pods_Belle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Belle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		425E70564525ACC82057E229 /* Pods-BelleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BelleTests.release.xcconfig"; path = "Target Support Files/Pods-BelleTests/Pods-BelleTests.release.xcconfig"; sourceTree = "<group>"; };
+		656625BD25F4A47B00FDA9CC /* NoteListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableViewCell.swift; sourceTree = "<group>"; };
+		656625BE25F4A47B00FDA9CC /* NoteListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteListTableViewCell.xib; sourceTree = "<group>"; };
 		656A8AA725F4909F00C977E3 /* NoteListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListCollectionViewCell.swift; sourceTree = "<group>"; };
 		656A8AA825F4909F00C977E3 /* NoteListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteListCollectionViewCell.xib; sourceTree = "<group>"; };
 		656EE58625F3A28300913CC2 /* Belle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Belle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +68,7 @@
 		656EE5AD25F3A28600913CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656EE60425F3B4CB00913CC2 /* NoteListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListCollectionViewController.swift; sourceTree = "<group>"; };
 		656EE61425F4628800913CC2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		658DBECE25F4A3B000DBE590 /* NoteListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableViewController.swift; sourceTree = "<group>"; };
 		65E605E025F46D19004563A4 /* CalendarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLogic.swift; sourceTree = "<group>"; };
 		6618F973BC060210FF97727F /* Pods_BelleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BelleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B4DC4C19E23CB80E31A683 /* Pods-Belle-BelleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belle-BelleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Belle-BelleUITests/Pods-Belle-BelleUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 			children = (
 				656A8AA725F4909F00C977E3 /* NoteListCollectionViewCell.swift */,
 				656A8AA825F4909F00C977E3 /* NoteListCollectionViewCell.xib */,
+				656625BD25F4A47B00FDA9CC /* NoteListTableViewCell.swift */,
+				656625BE25F4A47B00FDA9CC /* NoteListTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 			children = (
 				656EE61425F4628800913CC2 /* HomeViewController.swift */,
 				656EE60425F3B4CB00913CC2 /* NoteListCollectionViewController.swift */,
+				658DBECE25F4A3B000DBE590 /* NoteListTableViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -344,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656625C025F4A47B00FDA9CC /* NoteListTableViewCell.xib in Resources */,
 				656A8AAA25F4909F00C977E3 /* NoteListCollectionViewCell.xib in Resources */,
 				656EE59625F3A28600913CC2 /* LaunchScreen.storyboard in Resources */,
 				656EE59325F3A28600913CC2 /* Assets.xcassets in Resources */,
@@ -478,6 +488,8 @@
 				656A8AA925F4909F00C977E3 /* NoteListCollectionViewCell.swift in Sources */,
 				656EE61525F4628800913CC2 /* HomeViewController.swift in Sources */,
 				65E605E125F46D19004563A4 /* CalendarLogic.swift in Sources */,
+				656625BF25F4A47B00FDA9CC /* NoteListTableViewCell.swift in Sources */,
+				658DBECF25F4A3B000DBE590 /* NoteListTableViewController.swift in Sources */,
 				656EE60525F3B4CB00913CC2 /* NoteListCollectionViewController.swift in Sources */,
 				656EE58A25F3A28300913CC2 /* AppDelegate.swift in Sources */,
 				656EE58C25F3A28300913CC2 /* SceneDelegate.swift in Sources */,

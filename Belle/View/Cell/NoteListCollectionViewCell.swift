@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 class NoteListCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
@@ -18,7 +17,7 @@ class NoteListCollectionViewCell: UICollectionViewCell {
         self.clipsToBounds = true
         self.layer.masksToBounds = false
         self.layer.shadowOpacity = 0.2
-        self.layer.shadowRadius = 10
+        self.layer.shadowRadius = 3
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.cornerRadius = 20
         self.layer.shadowOffset = CGSize(width: 1,height: 1)

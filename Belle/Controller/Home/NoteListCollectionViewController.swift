@@ -20,8 +20,8 @@ class NoteListCollectionViewController: UICollectionViewController {
     func setUpCollectionView(){
         let layout = UICollectionViewFlowLayout()
         collectionView.collectionViewLayout = layout
-        collectionView.register(NoteListCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView.backgroundColor = .systemGroupedBackground
+        collectionView.register(UINib(nibName: "NoteListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.backgroundColor = .systemBackground
         collectionView.contentInsetAdjustmentBehavior = .never
     }
     /*
@@ -49,7 +49,7 @@ class NoteListCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! NoteListCollectionViewCell
-        cell.backgroundColor = .systemBackground
+        cell.backgroundColor = .systemGroupedBackground
         cell.setUp()
         // Configure the cell
         
