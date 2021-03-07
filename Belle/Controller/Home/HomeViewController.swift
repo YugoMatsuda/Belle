@@ -7,11 +7,11 @@
 
 import XLPagerTabStrip
 
-class HomeViewController: ButtonBarPagerTabStripViewController {
+class HomeViewController: TwitterPagerTabStripViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpNav()
     }
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -22,6 +22,16 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         vcs.append(child_2)
 
         return vcs
+    }
+    func setUpNav(){
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        let label = UILabel()
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
+        label.textColor = UIColor.label
+        let day = CalenderLogic().getDay(Date())
+        label.text = CalenderLogic().getMonthName(month: day.1) + ", " + String(day.2) + " / " + "" + String(day.0)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: label)
     }
     /*
     // MARK: - Navigation

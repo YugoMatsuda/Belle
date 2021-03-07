@@ -16,6 +16,7 @@
 		656EE5AC25F3A28600913CC2 /* BelleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE5AB25F3A28600913CC2 /* BelleUITests.swift */; };
 		656EE60525F3B4CB00913CC2 /* NoteListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE60425F3B4CB00913CC2 /* NoteListCollectionViewController.swift */; };
 		656EE61525F4628800913CC2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE61425F4628800913CC2 /* HomeViewController.swift */; };
+		65E605E125F46D19004563A4 /* CalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E605E025F46D19004563A4 /* CalendarLogic.swift */; };
 		798118B73DD1D01FCC2DBD94 /* Pods_Belle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27542396902F278A842F579F /* Pods_Belle.framework */; };
 		8F222F183EA1FFEEBF12F91B /* Pods_Belle_BelleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31491E0144AF531D8C611E7 /* Pods_Belle_BelleUITests.framework */; };
 		BFFF9E0916D4B619646B4173 /* Pods_BelleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6618F973BC060210FF97727F /* Pods_BelleTests.framework */; };
@@ -58,6 +59,7 @@
 		656EE5AD25F3A28600913CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656EE60425F3B4CB00913CC2 /* NoteListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListCollectionViewController.swift; sourceTree = "<group>"; };
 		656EE61425F4628800913CC2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		65E605E025F46D19004563A4 /* CalendarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLogic.swift; sourceTree = "<group>"; };
 		6618F973BC060210FF97727F /* Pods_BelleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BelleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B4DC4C19E23CB80E31A683 /* Pods-Belle-BelleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belle-BelleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Belle-BelleUITests/Pods-Belle-BelleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC67D9F1FCFA8EDF0448DA01 /* Pods-Belle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belle.debug.xcconfig"; path = "Target Support Files/Pods-Belle/Pods-Belle.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		656EE58825F3A28300913CC2 /* Belle */ = {
 			isa = PBXGroup;
 			children = (
+				65E605DF25F46C96004563A4 /* Utilities */,
 				656EE5CD25F3A3F900913CC2 /* Model */,
 				656EE5CE25F3A3FF00913CC2 /* View */,
 				656EE5CF25F3A40D00913CC2 /* ViewModel */,
@@ -199,6 +202,14 @@
 				656EE60425F3B4CB00913CC2 /* NoteListCollectionViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		65E605DF25F46C96004563A4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				65E605E025F46D19004563A4 /* CalendarLogic.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		A9B27E8D88A50D00B1DB81BC /* Frameworks */ = {
@@ -450,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				656EE61525F4628800913CC2 /* HomeViewController.swift in Sources */,
+				65E605E125F46D19004563A4 /* CalendarLogic.swift in Sources */,
 				656EE60525F3B4CB00913CC2 /* NoteListCollectionViewController.swift in Sources */,
 				656EE58A25F3A28300913CC2 /* AppDelegate.swift in Sources */,
 				656EE58C25F3A28300913CC2 /* SceneDelegate.swift in Sources */,

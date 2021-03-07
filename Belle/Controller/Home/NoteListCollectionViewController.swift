@@ -19,9 +19,9 @@ class NoteListCollectionViewController: UICollectionViewController {
     }
     func setUpCollectionView(){
         let layout = UICollectionViewFlowLayout()
-        collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView.backgroundColor = .systemBackground
         collectionView.collectionViewLayout = layout
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.backgroundColor = .systemBackground
         collectionView.contentInsetAdjustmentBehavior = .never
     }
     /*
