@@ -8,6 +8,7 @@
 import XLPagerTabStrip
 
 class HomeViewController: TwitterPagerTabStripViewController {
+    
 
     private let postButton : AnimationButton = {
         let button = AnimationButton()
@@ -38,11 +39,10 @@ class HomeViewController: TwitterPagerTabStripViewController {
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         var vcs: [UIViewController] = []
-        let child_1 = NoteListTableViewController()
+        let child_1 = NoteListCollectionViewController(collectionViewLayout: UICollectionViewLayout())
         vcs.append(child_1)
-        let child_2 = NoteListCollectionViewController(collectionViewLayout: UICollectionViewLayout())
+        let child_2 = NoteListTableViewController()
         vcs.append(child_2)
-
         return vcs
     }
     func setUpNav(){

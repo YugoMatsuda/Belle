@@ -17,12 +17,19 @@ class NoteListCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         setUpCollectionView()
     }
+    
     func setUpCollectionView(){
         let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+        layout.itemSize = CGSize(width:self.view.frame.size.width - 40, height: 50)
         collectionView.collectionViewLayout = layout
         collectionView.register(UINib(nibName: "NoteListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.backgroundColor = .systemBackground
-        collectionView.contentInsetAdjustmentBehavior = .never
+        guard let nabHeight = navigationController?.navigationBar.frame.height else { return }
+        collectionView.contentInset.bottom = nabHeight * 2.5
+//        collectionView.frame.size.height = self.view.frame.size.height - nabHeight * 2
+//
+//        
     }
     /*
      // MARK: - Navigation
@@ -49,7 +56,7 @@ class NoteListCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! NoteListCollectionViewCell
-        cell.backgroundColor = .systemGroupedBackground
+        cell.backgroundColor = .systemBackground
         cell.setUp()
         // Configure the cell
         
@@ -59,23 +66,7 @@ class NoteListCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     
 }
-extension NoteListCollectionViewController: UICollectionViewDelegateFlowLayout{
-    
-    
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemSize = CGSize(width:self.view.frame.size.width - 40, height: 50)
-        return itemSize
-    }
-    
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
-    }
-    
-    
-    
-}
 extension NoteListCollectionViewController: IndicatorInfoProvider{
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
