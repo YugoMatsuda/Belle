@@ -46,7 +46,7 @@
                                 <state key="normal" image="ellipsis" catalog="system"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="280" id="Ekd-Wn-zir"/>
                             <constraint firstItem="UOq-ia-csc" firstAttribute="leading" secondItem="fWE-jI-9xm" secondAttribute="leading" constant="8" id="NSy-oS-uLI"/>
@@ -80,8 +80,8 @@
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="folder.fill" catalog="system" width="128" height="97"/>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

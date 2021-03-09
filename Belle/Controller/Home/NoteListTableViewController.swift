@@ -61,7 +61,6 @@ class NoteListTableViewController: UITableViewController {
     func setUpButton(){
         self.navigationController!.view.addSubview(postButton)
         postButton.anchor(bottom: self.navigationController!.view.bottomAnchor, right: self.navigationController!.view.rightAnchor,  paddingBottom: 50, paddingRight:10)
-//        self.tableView.bringSubviewToFront(self.postButton)
     }
     
     @objc func postButtonTapped(){

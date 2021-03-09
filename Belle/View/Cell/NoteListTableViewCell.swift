@@ -14,7 +14,7 @@ class NoteListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         baseView.clipsToBounds = true
         baseView.layer.masksToBounds = false
-        baseView.layer.shadowOpacity = 0.2
+        baseView.layer.shadowOpacity = 0.3
         baseView.layer.shadowRadius = 3
         baseView.layer.shadowColor = UIColor.black.cgColor
         baseView.layer.cornerRadius = 20
