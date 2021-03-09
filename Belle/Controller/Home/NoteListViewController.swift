@@ -1,17 +1,17 @@
 //
-//  NoteListTableViewController.swift
+//  NoteListViewController.swift
 //  Belle
 //
-//  Created by Yugo Matsuda on 2021-03-07.
+//  Created by Yugo Matsuda on 2021-03-09.
 //
 
-import XLPagerTabStrip
+import UIKit
 
-class NoteListTableViewController: UITableViewController {
+class NoteListViewController: UIViewController {
     
-    var itemInfo: IndicatorInfo = ""
     private let reuseIdentifier = "NoteListTableViewCell"
-    
+
+    @IBOutlet weak var tableView: UITableView!
     private let postButton : AnimationButton = {
         let button = AnimationButton()
         button.setDimensions(width: 40, height: 40)
@@ -29,7 +29,7 @@ class NoteListTableViewController: UITableViewController {
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.3
         button.layer.shadowRadius = 15
-        button.addTarget(self, action: #selector(postButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(postButtonTapped), for: .allTouchEvents)
         return button
     }()
     
@@ -42,6 +42,8 @@ class NoteListTableViewController: UITableViewController {
     
     
     func setUpTableView(){
+        tableView.delegate = self
+        tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "NoteListTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
         tableView.contentInset.bottom = 180
@@ -59,36 +61,50 @@ class NoteListTableViewController: UITableViewController {
     }
     
     func setUpButton(){
-        self.navigationController!.view.addSubview(postButton)
-        postButton.anchor(bottom: self.navigationController!.view.bottomAnchor, right: self.navigationController!.view.rightAnchor,  paddingBottom: 50, paddingRight:10)
+        self.view.addSubview(postButton)
+        postButton.anchor(bottom: self.view.bottomAnchor, right: self.view.rightAnchor,  paddingBottom: 50, paddingRight:10)
     }
     
     @objc func postButtonTapped(){
         print(#function)
-    }
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        guard let vc = R.storyboard.post.postMemoViewController() else { return  }
+        let nav = Utilities().templateNav(title: "プロフィール編集", rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true, completion: nil)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
+extension NoteListViewController: UITableViewDelegate, UITableViewDataSource {
+
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 10
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier,for:indexPath) as! NoteListTableViewCell
         cell.selectionStyle = .none
         return cell
     }
     
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        
     }
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -96,16 +112,4 @@ class NoteListTableViewController: UITableViewController {
         }
     }
     
-    /*
-     // MARK: - Navigation
-     
-     
-     */
-    
-}
-extension NoteListTableViewController: IndicatorInfoProvider{
-    
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return itemInfo
-    }
 }

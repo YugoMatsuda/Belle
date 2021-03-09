@@ -19,9 +19,10 @@
 		656EE5A125F3A28600913CC2 /* BelleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE5A025F3A28600913CC2 /* BelleTests.swift */; };
 		656EE5AC25F3A28600913CC2 /* BelleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE5AB25F3A28600913CC2 /* BelleUITests.swift */; };
 		656EE60525F3B4CB00913CC2 /* NoteListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE60425F3B4CB00913CC2 /* NoteListCollectionViewController.swift */; };
-		656EE61525F4628800913CC2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EE61425F4628800913CC2 /* HomeViewController.swift */; };
-		658DBECF25F4A3B000DBE590 /* NoteListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DBECE25F4A3B000DBE590 /* NoteListTableViewController.swift */; };
 		65C7794925F7930800703288 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7794825F7930800703288 /* R.generated.swift */; };
+		65C7794E25F7934600703288 /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C7794D25F7934600703288 /* Post.storyboard */; };
+		65C7795325F7937800703288 /* PostMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7795225F7937800703288 /* PostMemoViewController.swift */; };
+		65C7795E25F795E900703288 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7795D25F795E900703288 /* NoteListViewController.swift */; };
 		65DF37F825F4E67400AFE453 /* AnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF37F725F4E67400AFE453 /* AnimationButton.swift */; };
 		65DF380025F4EBB100AFE453 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF37FF25F4EBB100AFE453 /* Extension.swift */; };
 		65E605E125F46D19004563A4 /* CalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E605E025F46D19004563A4 /* CalendarLogic.swift */; };
@@ -70,9 +71,10 @@
 		656EE5AB25F3A28600913CC2 /* BelleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BelleUITests.swift; sourceTree = "<group>"; };
 		656EE5AD25F3A28600913CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656EE60425F3B4CB00913CC2 /* NoteListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListCollectionViewController.swift; sourceTree = "<group>"; };
-		656EE61425F4628800913CC2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		658DBECE25F4A3B000DBE590 /* NoteListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListTableViewController.swift; sourceTree = "<group>"; };
 		65C7794825F7930800703288 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		65C7794D25F7934600703288 /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
+		65C7795225F7937800703288 /* PostMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMemoViewController.swift; sourceTree = "<group>"; };
+		65C7795D25F795E900703288 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		65DF37F725F4E67400AFE453 /* AnimationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationButton.swift; sourceTree = "<group>"; };
 		65DF37FF25F4EBB100AFE453 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		65E605E025F46D19004563A4 /* CalendarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLogic.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				656EE61225F4626500913CC2 /* Home */,
+				65C7795225F7937800703288 /* PostMemoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -226,9 +229,8 @@
 		656EE61225F4626500913CC2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				656EE61425F4628800913CC2 /* HomeViewController.swift */,
 				656EE60425F3B4CB00913CC2 /* NoteListCollectionViewController.swift */,
-				658DBECE25F4A3B000DBE590 /* NoteListTableViewController.swift */,
+				65C7795D25F795E900703288 /* NoteListViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -238,6 +240,7 @@
 			children = (
 				65C7794825F7930800703288 /* R.generated.swift */,
 				656EE58F25F3A28300913CC2 /* Home.storyboard */,
+				65C7794D25F7934600703288 /* Post.storyboard */,
 				656EE59425F3A28600913CC2 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoard;
@@ -383,6 +386,7 @@
 				656A8AAA25F4909F00C977E3 /* NoteListCollectionViewCell.xib in Resources */,
 				656EE59625F3A28600913CC2 /* LaunchScreen.storyboard in Resources */,
 				656EE59325F3A28600913CC2 /* Assets.xcassets in Resources */,
+				65C7794E25F7934600703288 /* Post.storyboard in Resources */,
 				656EE59125F3A28300913CC2 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,15 +535,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				656A8AA925F4909F00C977E3 /* NoteListCollectionViewCell.swift in Sources */,
-				656EE61525F4628800913CC2 /* HomeViewController.swift in Sources */,
 				65E605E125F46D19004563A4 /* CalendarLogic.swift in Sources */,
 				656625BF25F4A47B00FDA9CC /* NoteListTableViewCell.swift in Sources */,
-				658DBECF25F4A3B000DBE590 /* NoteListTableViewController.swift in Sources */,
 				65DF380025F4EBB100AFE453 /* Extension.swift in Sources */,
 				656EE60525F3B4CB00913CC2 /* NoteListCollectionViewController.swift in Sources */,
 				65DF37F825F4E67400AFE453 /* AnimationButton.swift in Sources */,
 				656EE58A25F3A28300913CC2 /* AppDelegate.swift in Sources */,
+				65C7795E25F795E900703288 /* NoteListViewController.swift in Sources */,
 				65C7794925F7930800703288 /* R.generated.swift in Sources */,
+				65C7795325F7937800703288 /* PostMemoViewController.swift in Sources */,
 				656EE58C25F3A28300913CC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
