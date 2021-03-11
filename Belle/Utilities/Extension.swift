@@ -125,14 +125,10 @@ class Utilities {
         return button
     }
     
-    func templateNav(title:String,rootViewController:UIViewController)->UINavigationController{
+    func templateNav(rootViewController:UIViewController)->UINavigationController{
         let nav = UINavigationController(rootViewController: rootViewController)
-        nav.title = title
-        nav.navigationBar.barTintColor = .systemBackground
-        nav.navigationBar.tintColor = .label
-        nav.navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor.label
-        ]
+        nav.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        nav.navigationBar.shadowImage = UIImage()
         return nav
         
     }

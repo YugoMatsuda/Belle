@@ -51,7 +51,6 @@ class NoteListViewController: UIViewController {
     func setUpNav(){
         self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController!.navigationBar.shadowImage = UIImage()
-        
         let label = UILabel()
         label.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
         label.textColor = UIColor.label
@@ -68,7 +67,7 @@ class NoteListViewController: UIViewController {
     @objc func postButtonTapped(){
         print(#function)
         guard let vc = R.storyboard.post.postMemoViewController() else { return  }
-        let nav = Utilities().templateNav(title: "プロフィール編集", rootViewController: vc)
+        let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         self.present(nav, animated: true, completion: nil)
     }

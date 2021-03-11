@@ -9,19 +9,53 @@
     </dependencies>
     <scenes>
         <!--Post Memo View Controller-->
-        <scene sceneID="wyo-V4-G4v">
+        <scene sceneID="B3E-Lx-Gdt">
             <objects>
-                <viewController storyboardIdentifier="PostMemoViewController" id="rqa-ET-uhs" customClass="PostMemoViewController" customModule="Belle" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gss-6N-u7p">
+                <viewController storyboardIdentifier="PostMemoViewController" id="rDp-WG-9Nx" customClass="PostMemoViewController" customModule="Belle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Zb-QW-WUU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="TBt-1o-Sh4"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MU6-92-s3s">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6AM-Rj-Buv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MU6-92-s3s" firstAttribute="trailing" secondItem="6AM-Rj-Buv" secondAttribute="trailing" id="DVr-3R-NDC"/>
+                            <constraint firstAttribute="bottom" secondItem="MU6-92-s3s" secondAttribute="bottom" id="Mev-Az-fLS"/>
+                            <constraint firstItem="MU6-92-s3s" firstAttribute="leading" secondItem="6AM-Rj-Buv" secondAttribute="leading" id="Tjt-IF-KR7"/>
+                            <constraint firstItem="MU6-92-s3s" firstAttribute="top" secondItem="6AM-Rj-Buv" secondAttribute="top" id="gPa-wL-CW4"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WfB-RH-ryz"/>
+                    <connections>
+                        <outlet property="tableView" destination="MU6-92-s3s" id="NdJ-fb-MqZ"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YKN-vW-9VL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUg-tb-n5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72" y="-294"/>
+            <point key="canvasLocation" x="1924.6376811594205" y="-639.50892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JtC-qe-Ps1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IJh-eF-NtD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wCy-az-uVg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rDp-WG-9Nx" kind="relationship" relationship="rootViewController" id="J0s-av-jv9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpk-ZY-mpv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014.4927536231885" y="-639.50892857142856"/>
         </scene>
     </scenes>
     <resources>
