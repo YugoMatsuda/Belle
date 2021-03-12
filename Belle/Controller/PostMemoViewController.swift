@@ -10,8 +10,10 @@ import UIKit
 class PostMemoViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    private let reuseIdentifier = "PostMemoTextViewCell"
+    private let reuseIdentifierPostMemoTextViewCell = "PostMemoTextViewCell"
+    private let reuseIdentifierPostMemoFolderCell = "PostMemoFolderCell"
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
@@ -22,37 +24,46 @@ class PostMemoViewController: UIViewController {
     func setUpTableView(){
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: "PostMemoTextViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+        tableView.register(UINib(nibName: "PostMemoTextViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierPostMemoTextViewCell)
+        tableView.register(UINib(nibName: "PostMemoFolderCell", bundle: nil), forCellReuseIdentifier: reuseIdentifierPostMemoFolderCell)
+
     }
-  
-
     
     
-
+    
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 extension PostMemoViewController: UITableViewDelegate, UITableViewDataSource {
-
-
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier,for:indexPath) as! PostMemoTextViewCell
-        cell.selectionStyle = .none
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierPostMemoFolderCell,for:indexPath) as! PostMemoFolderCell
+            cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierPostMemoTextViewCell,for:indexPath) as! PostMemoTextViewCell
+            cell.selectionStyle = .none
+            return cell
+        }
+       
     }
     
     
@@ -69,7 +80,11 @@ extension PostMemoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.view.frame.height
+        if indexPath.row == 0 {
+            return 40
+        } else {
+            return self.view.frame.height
         }
+    }
     
 }
