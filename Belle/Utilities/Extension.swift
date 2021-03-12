@@ -6,6 +6,8 @@
 //
 
 import UIKit
+let screenSize: CGSize = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil,
                 left: NSLayoutXAxisAnchor? = nil,
@@ -133,4 +135,18 @@ class Utilities {
         
     }
     
+}
+extension UITextField {
+    func setUnderLine() {
+        // 枠線を非表示にする
+        borderStyle = .none
+        let underline = UIView()
+        // heightにはアンダーラインの高さを入れる
+        underline.frame = CGRect(x: 0, y: frame.height, width: screenSize.width * 0.9, height: 0.5)
+        // 枠線の色
+        underline.backgroundColor = .lightGray
+        addSubview(underline)
+        // 枠線を最前面に
+        bringSubviewToFront(underline)
+    }
 }

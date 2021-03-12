@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6h6-lw-W1B">
-                        <rect key="frame" x="8.5" y="38" width="303" height="313"/>
+                        <rect key="frame" x="8.5" y="41" width="303" height="313"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <color key="textColor" systemColor="labelColor"/>
@@ -26,12 +26,12 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="タイトル" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKK-ML-xtA">
-                        <rect key="frame" x="8.5" y="5" width="303" height="30"/>
+                        <rect key="frame" x="13" y="5" width="294" height="35"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="tZ9-Te-iLx"/>
+                            <constraint firstAttribute="height" constant="35" id="tZ9-Te-iLx"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
@@ -41,12 +41,15 @@
                     <constraint firstItem="6h6-lw-W1B" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="HcP-bc-W49"/>
                     <constraint firstItem="JKK-ML-xtA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="JAq-WE-n4q"/>
                     <constraint firstItem="6h6-lw-W1B" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.946875" id="cwi-TG-boz"/>
-                    <constraint firstItem="JKK-ML-xtA" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.946875" id="fJa-FR-bYz"/>
-                    <constraint firstItem="6h6-lw-W1B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="38" id="h0k-WW-3DB"/>
+                    <constraint firstItem="JKK-ML-xtA" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.92" id="fJa-FR-bYz"/>
+                    <constraint firstItem="6h6-lw-W1B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="41" id="h0k-WW-3DB"/>
                     <constraint firstItem="6h6-lw-W1B" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.886686" id="jdw-S2-LtH"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleTextField" destination="JKK-ML-xtA" id="zRL-UA-x4R"/>
+            </connections>
             <point key="canvasLocation" x="105.79710144927537" y="183.14732142857142"/>
         </tableViewCell>
     </objects>

@@ -25,6 +25,7 @@
 		65C7795E25F795E900703288 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7795D25F795E900703288 /* NoteListViewController.swift */; };
 		65C7796C25FA3C2400703288 /* PostMemoTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7796A25FA3C2400703288 /* PostMemoTextViewCell.swift */; };
 		65C7796D25FA3C2400703288 /* PostMemoTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C7796B25FA3C2400703288 /* PostMemoTextViewCell.xib */; };
+		65C7797225FB8E3F00703288 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C7797125FB8E3F00703288 /* CustomTextField.swift */; };
 		65DF37F825F4E67400AFE453 /* AnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF37F725F4E67400AFE453 /* AnimationButton.swift */; };
 		65DF380025F4EBB100AFE453 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF37FF25F4EBB100AFE453 /* Extension.swift */; };
 		65E605E125F46D19004563A4 /* CalendarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E605E025F46D19004563A4 /* CalendarLogic.swift */; };
@@ -79,6 +80,7 @@
 		65C7795D25F795E900703288 /* NoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		65C7796A25FA3C2400703288 /* PostMemoTextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMemoTextViewCell.swift; sourceTree = "<group>"; };
 		65C7796B25FA3C2400703288 /* PostMemoTextViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostMemoTextViewCell.xib; sourceTree = "<group>"; };
+		65C7797125FB8E3F00703288 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		65DF37F725F4E67400AFE453 /* AnimationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationButton.swift; sourceTree = "<group>"; };
 		65DF37FF25F4EBB100AFE453 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		65E605E025F46D19004563A4 /* CalendarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLogic.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				65DF37F525F4E65500AFE453 /* Button */,
 				656A8AA625F4903500C977E3 /* Cell */,
+				65C7797125FB8E3F00703288 /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				656EE58A25F3A28300913CC2 /* AppDelegate.swift in Sources */,
 				65C7795E25F795E900703288 /* NoteListViewController.swift in Sources */,
 				65C7794925F7930800703288 /* R.generated.swift in Sources */,
+				65C7797225FB8E3F00703288 /* CustomTextField.swift in Sources */,
 				65C7796C25FA3C2400703288 /* PostMemoTextViewCell.swift in Sources */,
 				65C7795325F7937800703288 /* PostMemoViewController.swift in Sources */,
 				656EE58C25F3A28300913CC2 /* SceneDelegate.swift in Sources */,
